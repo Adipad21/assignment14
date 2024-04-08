@@ -358,7 +358,7 @@ app.put("/api/crafts/:id", upload.single("img"), (req, res) => {
     craft.supplies = req.body.supplies.split(",");
     
     if (req.file) {
-      craft.img = req.file.filename;
+      craft.image = req.file.filename;
     }
   
     res.send(crafts);
